@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Interactive Curtain Viewer</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+    
+    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+  </head> 
+<body>
+  <div id="card">
+    <!-- All you need to put beautiful, interactive 3D content on your site: -->
+    <model-viewer src="models/blind2.glb"
+                  ios-src="models/blind2.usdz"
+                  poster="images/blind.avif"
+                  alt="AR Curtain"
+                  shadow-intensity="1"
+                  camera-controls
+                  scale = ".07, .07, .07"
+                  auto-rotate ar >
+    </model-viewer>
+    <section class="attribution">
+      <span>
+        <h1>Curtains</h1>
+        <span>By <a href="https://trinityxr.in/" target="_blank">Trinity</a></span>
+      </span>
+    </section>
+    
+  </div>
+  
+  
+  
+  
+  
+  <!-- 💁 Include both scripts below to support all browsers! -->
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+</body>
+</html>
